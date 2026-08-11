@@ -1,133 +1,164 @@
-/* =========================================
-   START DATE
+/* =====================================
+   START OF OUR STORY
 
    12 January 2024
-   Time unknown, so we use 12:00 AM
-========================================= */
+   Exact time unknown.
 
-const startDate = new Date("2024-01-12T00:00:00");
+   We use 12:00 AM as the
+   starting time.
+===================================== */
+
+const startDate =
+    new Date("2024-01-12T00:00:00");
 
 
-/* =========================================
+/* =====================================
    OPEN THE SURPRISE
-========================================= */
+===================================== */
 
 function openLove() {
 
-    const intro = document.getElementById("intro");
+    const intro =
+        document.getElementById("intro");
 
-    const main = document.getElementById("main-content");
+    const main =
+        document.getElementById("main-content");
+
 
     intro.style.display = "none";
 
     main.style.display = "block";
+
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
 
-    updateCounter();
 
-    setInterval(updateCounter, 1000);
+    updateLiveCounter();
+
+
+    setInterval(
+        updateLiveCounter,
+        1000
+    );
+
 
     startFloatingHearts();
 }
 
 
-/* =========================================
-   LIVE TOGETHERNESS COUNTER
-========================================= */
 
-function updateCounter() {
+/* =====================================
+   LIVE COUNTER
+===================================== */
+
+function updateLiveCounter() {
 
     const now = new Date();
 
-    let months =
-        (now.getFullYear() - startDate.getFullYear()) * 12
-        +
-        (now.getMonth() - startDate.getMonth());
+
+    const difference =
+        now - startDate;
 
 
-    let anniversary = new Date(startDate);
-
-    anniversary.setMonth(
-        startDate.getMonth() + months
-    );
-
-
-    if (anniversary > now) {
-
-        months--;
-
-        anniversary = new Date(startDate);
-
-        anniversary.setMonth(
-            startDate.getMonth() + months
-        );
+    if (difference < 0) {
+        return;
     }
 
 
-    const remaining =
-        now - anniversary;
+    /* Total elapsed seconds */
 
-
-    const days =
+    const totalSeconds =
         Math.floor(
-            remaining /
-            (1000 * 60 * 60 * 24)
+            difference / 1000
         );
 
 
+    /* Days */
+
+    const days =
+        Math.floor(
+            totalSeconds / 86400
+        );
+
+
+    /* Hours */
+
     const hours =
         Math.floor(
-            (remaining /
-                (1000 * 60 * 60))
-        ) % 24;
+            (totalSeconds % 86400)
+            / 3600
+        );
 
+
+    /* Minutes */
 
     const minutes =
         Math.floor(
-            (remaining /
-                (1000 * 60))
-        ) % 60;
+            (totalSeconds % 3600)
+            / 60
+        );
 
+
+    /* Seconds */
 
     const seconds =
-        Math.floor(
-            remaining / 1000
-        ) % 60;
+        totalSeconds % 60;
 
 
-    document.getElementById("months").textContent =
-        months;
+    /* =================================
+       UPDATE LIVE COUNTER
+    ================================= */
+
+    document.getElementById(
+        "live-days"
+    ).textContent =
+        days.toLocaleString();
 
 
-    document.getElementById("days").textContent =
-        days;
-
-
-    document.getElementById("hours").textContent =
+    document.getElementById(
+        "live-hours"
+    ).textContent =
         hours;
 
 
-    document.getElementById("minutes").textContent =
+    document.getElementById(
+        "live-minutes"
+    ).textContent =
         minutes;
 
 
-    document.getElementById("seconds").textContent =
+    document.getElementById(
+        "live-seconds"
+    ).textContent =
         seconds;
+
+
+    /* =================================
+       UPDATE TOTAL SECONDS
+       IN THE 31-MONTH SECTION
+    ================================= */
+
+    document.getElementById(
+        "total-seconds"
+    ).textContent =
+        totalSeconds.toLocaleString();
 }
 
 
-/* =========================================
+
+/* =====================================
    FLOATING HEARTS
-========================================= */
+===================================== */
 
 function createFloatingHeart() {
 
     const container =
-        document.getElementById("floating-hearts");
+        document.getElementById(
+            "floating-hearts"
+        );
 
 
     const heart =
@@ -141,17 +172,18 @@ function createFloatingHeart() {
     const symbols = [
         "♡",
         "♥",
-        "♡",
-        "✦",
         "💗",
-        "💕"
+        "💕",
+        "✦",
+        "♡"
     ];
 
 
     heart.textContent =
         symbols[
             Math.floor(
-                Math.random() * symbols.length
+                Math.random()
+                * symbols.length
             )
         ];
 
@@ -161,13 +193,14 @@ function createFloatingHeart() {
 
 
     heart.style.fontSize =
-        (12 + Math.random() * 22) + "px";
+        (12 + Math.random() * 22)
+        + "px";
 
 
     heart.style.color =
         Math.random() > 0.5
-            ? "#e79ab5"
-            : "#b89bd9";
+        ? "#e79ab5"
+        : "#b89bd9";
 
 
     const duration =
@@ -178,14 +211,15 @@ function createFloatingHeart() {
         duration + "s";
 
 
-    container.appendChild(heart);
+    container.appendChild(
+        heart
+    );
 
 
-    setTimeout(() => {
-
-        heart.remove();
-
-    }, duration * 1000);
+    setTimeout(
+        () => heart.remove(),
+        duration * 1000
+    );
 }
 
 
@@ -195,4 +229,4 @@ function startFloatingHearts() {
         createFloatingHeart,
         700
     );
-      }0
+}

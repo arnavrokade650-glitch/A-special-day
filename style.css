@@ -1,0 +1,879 @@
+/* =====================================
+   BASIC SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #563545;
+
+    background:
+        radial-gradient(circle at 10% 10%, #ffe3ee 0%, transparent 30%),
+        radial-gradient(circle at 90% 20%, #eadfff 0%, transparent 30%),
+        radial-gradient(circle at 50% 90%, #ffdce9 0%, transparent 35%),
+        #fff7fa;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================
+   OPENING SCREEN
+===================================== */
+
+#intro {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd9e8, transparent 35%),
+        radial-gradient(circle at 80% 80%, #e8dcff, transparent 35%),
+        linear-gradient(135deg, #fff5f8, #f7efff);
+
+    position: relative;
+}
+
+
+.intro-card {
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(120, 70, 100, 0.15);
+
+    animation: appear 1.2s ease;
+}
+
+
+.intro-heart {
+
+    font-size: 70px;
+
+    color: #e78ba9;
+
+    margin-bottom: 10px;
+
+    animation: heartbeat 2s infinite;
+}
+
+
+.little-text {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #a97991;
+
+    margin-bottom: 20px;
+}
+
+
+.intro-card h1 {
+
+    font-size: clamp(32px, 8vw, 48px);
+
+    color: #74475d;
+
+    margin-bottom: 25px;
+}
+
+
+.question {
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    color: #654052;
+
+    margin-bottom: 20px;
+}
+
+
+.small-note {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: #9b7b8a;
+
+    margin-bottom: 30px;
+}
+
+
+button {
+
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(135deg, #e993b0, #c99be8);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(200, 130, 170, 0.3);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(200, 130, 170, 0.4);
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+#main-content {
+
+    display: none;
+
+    animation: appear 1.5s ease;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(circle at 20% 30%, #ffd9e8, transparent 35%),
+        radial-gradient(circle at 80% 60%, #e6dcff, transparent 35%),
+        linear-gradient(135deg, #fff6fa, #f8f2ff);
+}
+
+
+.sparkle {
+
+    font-size: 40px;
+
+    color: #d994b1;
+
+    margin-bottom: 15px;
+
+    animation: sparkle 2s infinite;
+}
+
+
+.date {
+
+    font-family: Arial, sans-serif;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    color: #a67b90;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(45px, 11vw, 78px);
+
+    line-height: 1.05;
+
+    color: #71465b;
+
+    margin-bottom: 30px;
+}
+
+
+.hero-text {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #765567;
+}
+
+
+.scroll {
+
+    margin-top: 70px;
+
+    font-size: 30px;
+
+    color: #c58ca7;
+
+    animation: bounce 2s infinite;
+}
+
+
+/* =====================================
+   COUNTER
+===================================== */
+
+.counter-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.65);
+}
+
+
+.section-label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #b17f96;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+}
+
+
+.counter-section h2,
+.memories-section h2 {
+
+    font-size: clamp(30px, 7vw, 45px);
+
+    color: #71465b;
+
+    margin-bottom: 15px;
+}
+
+
+.counter-description {
+
+    font-family: Arial, sans-serif;
+
+    color: #987d8b;
+
+    margin-bottom: 45px;
+
+    line-height: 1.6;
+}
+
+
+.counter-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+
+.counter-box {
+
+    width: 125px;
+
+    padding: 25px 10px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(145deg, #fff9fb, #f9efff);
+
+    border: 1px solid rgba(220,180,200,0.25);
+
+    box-shadow:
+        0 15px 35px rgba(110,70,100,0.08);
+}
+
+
+.counter-box span {
+
+    display: block;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    color: #9b5f7a;
+}
+
+
+.counter-box p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #aa8999;
+
+    margin-top: 8px;
+}
+
+
+.counter-bottom {
+
+    margin-top: 40px;
+
+    font-style: italic;
+
+    color: #967181;
+}
+
+
+/* =====================================
+   LOVE LETTER
+===================================== */
+
+.letter-section {
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff2f7,
+            #f5efff
+        );
+}
+
+
+.letter-card {
+
+    max-width: 720px;
+
+    margin: auto;
+
+    padding: 55px 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 70px rgba(100,60,90,0.1);
+
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+
+.letter-top {
+
+    font-size: 55px;
+
+    color: #e08eac;
+
+    margin-bottom: 15px;
+}
+
+
+.letter-card h2 {
+
+    font-size: 36px;
+
+    color: #74475d;
+
+    margin-bottom: 35px;
+}
+
+
+.letter-card p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    color: #715563;
+
+    margin-bottom: 22px;
+}
+
+
+.special {
+
+    font-family: Georgia, serif !important;
+
+    font-size: 23px !important;
+
+    font-weight: bold;
+
+    color: #b45e80 !important;
+}
+
+
+.big-line {
+
+    font-family: Georgia, serif !important;
+
+    font-size: 30px !important;
+
+    font-weight: bold;
+
+    color: #a25877 !important;
+}
+
+
+/* =====================================
+   MEMORIES
+===================================== */
+
+.memories-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #fff9fb;
+}
+
+
+.memory-text {
+
+    font-family: Arial, sans-serif;
+
+    color: #997f8d;
+
+    margin-bottom: 40px;
+}
+
+
+.photo-grid {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.photo-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #f3dce6;
+
+    box-shadow:
+        0 15px 35px rgba(100,60,90,0.12);
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+
+.photo-card:hover img {
+
+    transform: scale(1.06);
+}
+
+
+.photo-caption {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 15px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(70,40,60,0.65)
+    );
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    padding-top: 35px;
+}
+
+
+/* =====================================
+   FINAL
+===================================== */
+
+.final-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 30% 30%, #ffdce9, transparent 35%),
+        radial-gradient(circle at 70% 70%, #e4d8ff, transparent 35%),
+        #fff5f9;
+}
+
+
+.final-card {
+
+    max-width: 650px;
+}
+
+
+.final-heart {
+
+    font-size: 70px;
+
+    animation: heartbeat 1.8s infinite;
+
+    margin-bottom: 20px;
+}
+
+
+.final-card h2 {
+
+    font-size: clamp(32px, 8vw, 50px);
+
+    color: #71465b;
+
+    margin-bottom: 30px;
+}
+
+
+.final-card > p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #745767;
+
+    margin-bottom: 25px;
+}
+
+
+.forever {
+
+    margin: 40px 0;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #a35878;
+
+    line-height: 1.5;
+}
+
+
+.forever span {
+
+    font-size: 25px;
+
+    color: #9b7db0;
+}
+
+
+.ending {
+
+    margin-top: 35px;
+}
+
+
+.signature {
+
+    margin-top: 35px;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    color: #a26982;
+}
+
+
+/* =====================================
+   FLOATING HEARTS
+===================================== */
+
+#floating-hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+
+.floating-heart {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    opacity: 0;
+
+    animation:
+        floatUp linear forwards;
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 0.7;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.15);
+    }
+}
+
+
+@keyframes bounce {
+
+    0%, 100% {
+
+        transform: translateY(0);
+    }
+
+    50% {
+
+        transform: translateY(10px);
+    }
+}
+
+
+@keyframes sparkle {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+        opacity: 0.6;
+    }
+
+    50% {
+
+        transform: scale(1.3);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .intro-card {
+
+        padding: 45px 22px;
+    }
+
+
+    .question {
+
+        font-size: 19px;
+    }
+
+
+    .counter-box {
+
+        width: 95px;
+
+        padding: 20px 8px;
+    }
+
+
+    .counter-box span {
+
+        font-size: 26px;
+    }
+
+
+    .letter-card {
+
+        padding: 40px 22px;
+    }
+
+
+    .letter-card h2 {
+
+        font-size: 30px;
+    }
+
+
+    .letter-card p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .photo-grid {
+
+        gap: 10px;
+    }
+}

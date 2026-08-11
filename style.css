@@ -1,76 +1,111 @@
-/* =====================================
-   BASIC SETTINGS
-===================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     color: #563545;
 
     background:
-        radial-gradient(circle at 10% 10%, #ffe3ee 0%, transparent 30%),
-        radial-gradient(circle at 90% 20%, #eadfff 0%, transparent 30%),
-        radial-gradient(circle at 50% 90%, #ffdce9 0%, transparent 35%),
+
+        radial-gradient(
+            circle at 10% 10%,
+            #ffe3ee 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            #eadfff 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            #ffdce9 0%,
+            transparent 35%
+        ),
+
         #fff7fa;
 
     overflow-x: hidden;
 }
 
 
-/* =====================================
-   OPENING SCREEN
-===================================== */
+/* ===============================
+   OPENING
+=============================== */
 
 #intro {
 
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 25px;
 
     background:
-        radial-gradient(circle at 20% 20%, #ffd9e8, transparent 35%),
-        radial-gradient(circle at 80% 80%, #e8dcff, transparent 35%),
-        linear-gradient(135deg, #fff5f8, #f7efff);
 
-    position: relative;
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd9e8,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #e8dcff,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #f7efff
+        );
 }
 
 
 .intro-card {
 
     width: 100%;
+
     max-width: 520px;
 
     padding: 55px 30px;
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.65);
-
-    border: 1px solid rgba(255,255,255,0.8);
+    background:
+        rgba(255,255,255,0.7);
 
     border-radius: 35px;
 
     backdrop-filter: blur(18px);
 
     box-shadow:
-        0 25px 70px rgba(120, 70, 100, 0.15);
+        0 25px 70px
+        rgba(120,70,100,0.15);
 
-    animation: appear 1.2s ease;
+    animation:
+        appear 1.2s ease;
 }
 
 
@@ -82,7 +117,8 @@ body {
 
     margin-bottom: 10px;
 
-    animation: heartbeat 2s infinite;
+    animation:
+        heartbeat 2s infinite;
 }
 
 
@@ -102,7 +138,8 @@ body {
 
 .intro-card h1 {
 
-    font-size: clamp(32px, 8vw, 48px);
+    font-size:
+        clamp(32px,8vw,48px);
 
     color: #74475d;
 
@@ -124,7 +161,7 @@ body {
 
 .small-note {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 14px;
 
@@ -143,7 +180,12 @@ button {
     border-radius: 50px;
 
     background:
-        linear-gradient(135deg, #e993b0, #c99be8);
+
+        linear-gradient(
+            135deg,
+            #e993b0,
+            #c99be8
+        );
 
     color: white;
 
@@ -154,7 +196,8 @@ button {
     cursor: pointer;
 
     box-shadow:
-        0 12px 30px rgba(200, 130, 170, 0.3);
+        0 12px 30px
+        rgba(200,130,170,0.3);
 
     transition: 0.3s;
 }
@@ -162,28 +205,27 @@ button {
 
 button:hover {
 
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 18px 35px rgba(200, 130, 170, 0.4);
+    transform:
+        translateY(-4px);
 }
 
 
-/* =====================================
+/* ===============================
    MAIN
-===================================== */
+=============================== */
 
 #main-content {
 
     display: none;
 
-    animation: appear 1.5s ease;
+    animation:
+        appear 1.5s ease;
 }
 
 
-/* =====================================
+/* ===============================
    HERO
-===================================== */
+=============================== */
 
 .hero {
 
@@ -202,9 +244,24 @@ button:hover {
     padding: 40px 25px;
 
     background:
-        radial-gradient(circle at 20% 30%, #ffd9e8, transparent 35%),
-        radial-gradient(circle at 80% 60%, #e6dcff, transparent 35%),
-        linear-gradient(135deg, #fff6fa, #f8f2ff);
+
+        radial-gradient(
+            circle at 20% 30%,
+            #ffd9e8,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 60%,
+            #e6dcff,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff6fa,
+            #f8f2ff
+        );
 }
 
 
@@ -216,13 +273,14 @@ button:hover {
 
     margin-bottom: 15px;
 
-    animation: sparkle 2s infinite;
+    animation:
+        sparkle 2s infinite;
 }
 
 
 .date {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     letter-spacing: 4px;
 
@@ -238,7 +296,8 @@ button:hover {
 
 .hero h1 {
 
-    font-size: clamp(45px, 11vw, 78px);
+    font-size:
+        clamp(45px,11vw,78px);
 
     line-height: 1.05;
 
@@ -266,27 +325,42 @@ button:hover {
 
     color: #c58ca7;
 
-    animation: bounce 2s infinite;
+    animation:
+        bounce 2s infinite;
 }
 
 
-/* =====================================
-   COUNTER
-===================================== */
+/* ===============================
+   TIME TOGETHER
+=============================== */
 
-.counter-section {
+.time-together {
 
     padding: 100px 20px;
 
     text-align: center;
 
-    background: rgba(255,255,255,0.65);
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #ffe0eb,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #e8ddff,
+            transparent 35%
+        ),
+
+        #fff7fa;
 }
 
 
 .section-label {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 11px;
 
@@ -300,10 +374,150 @@ button:hover {
 }
 
 
-.counter-section h2,
-.memories-section h2 {
+.time-together h2 {
 
-    font-size: clamp(30px, 7vw, 45px);
+    font-size:
+        clamp(30px,7vw,45px);
+
+    line-height: 1.25;
+
+    color: #71465b;
+
+    margin-bottom: 15px;
+}
+
+
+.time-intro {
+
+    color: #987d8b;
+
+    font-family: Arial,sans-serif;
+
+    margin-bottom: 45px;
+}
+
+
+.time-grid {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 18px;
+}
+
+
+.time-card {
+
+    padding: 30px 15px;
+
+    border-radius: 28px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.9),
+            rgba(250,239,255,0.85)
+        );
+
+    border:
+        1px solid
+        rgba(220,180,205,0.3);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(110,70,100,0.09);
+
+    transition: 0.3s;
+}
+
+
+.time-card:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+.time-number {
+
+    font-size:
+        clamp(28px,6vw,45px);
+
+    font-weight: bold;
+
+    color: #a45d7b;
+
+    margin-bottom: 8px;
+}
+
+
+.time-label {
+
+    font-family: Arial,sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #b08398;
+
+    margin-bottom: 12px;
+}
+
+
+.time-card p {
+
+    font-family: Arial,sans-serif;
+
+    font-size: 13px;
+
+    color: #997b8c;
+}
+
+
+.time-ending {
+
+    max-width: 600px;
+
+    margin: 45px auto 0;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+    color: #8c6377;
+}
+
+
+/* ===============================
+   LIVE COUNTER
+=============================== */
+
+.counter-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.65);
+}
+
+
+.counter-section h2 {
+
+    font-size:
+        clamp(30px,7vw,45px);
 
     color: #71465b;
 
@@ -313,7 +527,7 @@ button:hover {
 
 .counter-description {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     color: #987d8b;
 
@@ -348,12 +562,17 @@ button:hover {
     border-radius: 24px;
 
     background:
-        linear-gradient(145deg, #fff9fb, #f9efff);
 
-    border: 1px solid rgba(220,180,200,0.25);
+        linear-gradient(
+            145deg,
+            #fff9fb,
+            #f9efff
+        );
 
     box-shadow:
-        0 15px 35px rgba(110,70,100,0.08);
+
+        0 15px 35px
+        rgba(110,70,100,0.08);
 }
 
 
@@ -371,7 +590,7 @@ button:hover {
 
 .counter-box p {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 10px;
 
@@ -393,15 +612,16 @@ button:hover {
 }
 
 
-/* =====================================
-   LOVE LETTER
-===================================== */
+/* ===============================
+   LETTER
+=============================== */
 
 .letter-section {
 
     padding: 100px 20px;
 
     background:
+
         linear-gradient(
             135deg,
             #fff2f7,
@@ -420,14 +640,14 @@ button:hover {
 
     text-align: center;
 
-    background: rgba(255,255,255,0.75);
+    background:
+        rgba(255,255,255,0.75);
 
     border-radius: 35px;
 
     box-shadow:
-        0 25px 70px rgba(100,60,90,0.1);
-
-    border: 1px solid rgba(255,255,255,0.9);
+        0 25px 70px
+        rgba(100,60,90,0.1);
 }
 
 
@@ -453,7 +673,7 @@ button:hover {
 
 .letter-card p {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 16px;
 
@@ -467,7 +687,7 @@ button:hover {
 
 .special {
 
-    font-family: Georgia, serif !important;
+    font-family: Georgia,serif !important;
 
     font-size: 23px !important;
 
@@ -479,7 +699,7 @@ button:hover {
 
 .big-line {
 
-    font-family: Georgia, serif !important;
+    font-family: Georgia,serif !important;
 
     font-size: 30px !important;
 
@@ -489,9 +709,9 @@ button:hover {
 }
 
 
-/* =====================================
-   MEMORIES
-===================================== */
+/* ===============================
+   PHOTOS
+=============================== */
 
 .memories-section {
 
@@ -503,9 +723,20 @@ button:hover {
 }
 
 
+.memories-section h2 {
+
+    font-size:
+        clamp(30px,7vw,45px);
+
+    color: #71465b;
+
+    margin-bottom: 15px;
+}
+
+
 .memory-text {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     color: #997f8d;
 
@@ -521,7 +752,8 @@ button:hover {
 
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
     gap: 18px;
 }
@@ -538,7 +770,8 @@ button:hover {
     background: #f3dce6;
 
     box-shadow:
-        0 15px 35px rgba(100,60,90,0.12);
+        0 15px 35px
+        rgba(100,60,90,0.12);
 }
 
 
@@ -546,7 +779,7 @@ button:hover {
 
     width: 100%;
 
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
 
     object-fit: cover;
 
@@ -558,7 +791,8 @@ button:hover {
 
 .photo-card:hover img {
 
-    transform: scale(1.06);
+    transform:
+        scale(1.06);
 }
 
 
@@ -572,26 +806,25 @@ button:hover {
 
     right: 0;
 
-    padding: 15px;
+    padding: 35px 15px 15px;
 
-    background: linear-gradient(
-        transparent,
-        rgba(70,40,60,0.65)
-    );
+    background:
+        linear-gradient(
+            transparent,
+            rgba(70,40,60,0.65)
+        );
 
     color: white;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 13px;
-
-    padding-top: 35px;
 }
 
 
-/* =====================================
+/* ===============================
    FINAL
-===================================== */
+=============================== */
 
 .final-section {
 
@@ -608,8 +841,19 @@ button:hover {
     text-align: center;
 
     background:
-        radial-gradient(circle at 30% 30%, #ffdce9, transparent 35%),
-        radial-gradient(circle at 70% 70%, #e4d8ff, transparent 35%),
+
+        radial-gradient(
+            circle at 30% 30%,
+            #ffdce9,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 70% 70%,
+            #e4d8ff,
+            transparent 35%
+        ),
+
         #fff5f9;
 }
 
@@ -624,7 +868,8 @@ button:hover {
 
     font-size: 70px;
 
-    animation: heartbeat 1.8s infinite;
+    animation:
+        heartbeat 1.8s infinite;
 
     margin-bottom: 20px;
 }
@@ -632,7 +877,8 @@ button:hover {
 
 .final-card h2 {
 
-    font-size: clamp(32px, 8vw, 50px);
+    font-size:
+        clamp(32px,8vw,50px);
 
     color: #71465b;
 
@@ -642,7 +888,7 @@ button:hover {
 
 .final-card > p {
 
-    font-family: Arial, sans-serif;
+    font-family: Arial,sans-serif;
 
     font-size: 17px;
 
@@ -676,17 +922,9 @@ button:hover {
 }
 
 
-.ending {
-
-    margin-top: 35px;
-}
-
-
 .signature {
 
     margin-top: 35px;
-
-    font-family: Georgia, serif;
 
     font-style: italic;
 
@@ -694,9 +932,9 @@ button:hover {
 }
 
 
-/* =====================================
+/* ===============================
    FLOATING HEARTS
-===================================== */
+=============================== */
 
 #floating-hearts {
 
@@ -752,19 +990,17 @@ button:hover {
 }
 
 
-/* =====================================
+/* ===============================
    ANIMATIONS
-===================================== */
+=============================== */
 
 @keyframes heartbeat {
 
-    0%, 100% {
-
+    0%,100% {
         transform: scale(1);
     }
 
     50% {
-
         transform: scale(1.15);
     }
 }
@@ -772,13 +1008,11 @@ button:hover {
 
 @keyframes bounce {
 
-    0%, 100% {
-
+    0%,100% {
         transform: translateY(0);
     }
 
     50% {
-
         transform: translateY(10px);
     }
 }
@@ -786,17 +1020,13 @@ button:hover {
 
 @keyframes sparkle {
 
-    0%, 100% {
-
+    0%,100% {
         transform: scale(1);
-
         opacity: 0.6;
     }
 
     50% {
-
         transform: scale(1.3);
-
         opacity: 1;
     }
 }
@@ -805,75 +1035,61 @@ button:hover {
 @keyframes appear {
 
     from {
-
         opacity: 0;
-
         transform: translateY(20px);
     }
 
     to {
-
         opacity: 1;
-
         transform: translateY(0);
     }
 }
 
 
-/* =====================================
+/* ===============================
    MOBILE
-===================================== */
+=============================== */
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
     .intro-card {
-
         padding: 45px 22px;
     }
 
-
     .question {
-
         font-size: 19px;
     }
 
-
-    .counter-box {
-
-        width: 95px;
-
-        padding: 20px 8px;
+    .time-grid {
+        grid-template-columns: 1fr;
     }
 
+    .time-card {
+        padding: 28px 15px;
+    }
+
+    .counter-box {
+        width: 95px;
+    }
 
     .counter-box span {
-
         font-size: 26px;
     }
 
-
     .letter-card {
-
         padding: 40px 22px;
     }
 
-
     .letter-card h2 {
-
         font-size: 30px;
     }
 
-
     .letter-card p {
-
         font-size: 15px;
-
         line-height: 1.8;
     }
 
-
     .photo-grid {
-
         gap: 10px;
     }
-}
+       }
